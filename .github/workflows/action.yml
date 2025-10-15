@@ -53,15 +53,15 @@ jobs:
           # testRunByTestName: ${{env.testRunByTestName}}
           testID: ${{env.testID}}
           # testName: ${{env.testName}}
-          #projectID: ${{env.projectID}}
+          projectID: ${{env.projectID}}
           #createTest: ${{env.createTest}}
-          #totalUsers: ${{env.totalUsers}}
-          #duration: ${{env.duration}}
-          #rampUp: ${{env.rampUp}}
+          totalUsers: ${{env.totalUsers}}
+          duration: ${{env.duration}}
+          rampUp: ${{env.rampUp}}
           #steps: ${{env.steps}}
           #throughput: ${{env.throughput}}
           #disableLoadConfig: ${{env.disableLoadConfig}}
           #concurrencyControlEnabled: ${{env.concurrencyControlEnabled}}
           #iterationsEnabled: ${{env.iterationsEnabled}}
           #iterations: ${{env.iterations}}
-          #locations: ${{env.locations}}
+          locations: ${{env.locations}}
