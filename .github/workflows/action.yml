@@ -24,6 +24,9 @@ env:
   iterationsEnabled: "true"
   iterations: "1"
   locations: "harbor-661f7af50d8f6f8f0d014359"
+  runExistingBucketLevelTest: "true"
+  triggerUrl: "https://api.runscope.com/radar/bucket/caf5cb14-bab6-47e0-a0c8-5dc259143a94/trigger"
+  apiToken: ${{ secrets.BZM_APIM_TOKEN }}
   
 on: push
 jobs:
@@ -36,14 +39,14 @@ jobs:
         run: ls $pwd
       - name: Set Environment Variable
         run: echo ${{env.steps}}
-      - name: BlazeRunnerAction
-        uses: Blazemeter/github-action@v8.7
-      # - name: HelloTestAction
-      #   uses: dnyanesh-nagre-perforce/blaze-action@v3.0.29
+      # - name: BlazeRunnerAction
+      #   uses: Blazemeter/github-action@v8.7
+      - name: HelloTestAction
+        uses: dnyanesh-nagre-perforce/blaze-action@v4.0.1
         id: run-test
         with:
-          apiKey: ${{env.apiKey}}
-          apiSecret: ${{env.apiSecret}}
+          # apiKey: ${{env.apiKey}}
+          # apiSecret: ${{env.apiSecret}}
           #testID: ${{env.testID}}
           # continuePipeline: ${{env.continuePipeline}}
           # showTailLog: ${{env.showTailLog}}
@@ -51,17 +54,20 @@ jobs:
           #inputstartfile: ${{env.inputStartFile}}
           # envVariable: ${{env.envVariable}}
           # testRunByTestName: ${{env.testRunByTestName}}
-          testID: ${{env.testID}}
+          # testID: ${{env.testID}}
           # testName: ${{env.testName}}
-          projectID: ${{env.projectID}}
+          # projectID: ${{env.projectID}}
           #createTest: ${{env.createTest}}
-          totalUsers: ${{env.totalUsers}}
-          duration: ${{env.duration}}
-          rampUp: ${{env.rampUp}}
+          # totalUsers: ${{env.totalUsers}}
+          # duration: ${{env.duration}}
+          # rampUp: ${{env.rampUp}}
           #steps: ${{env.steps}}
           #throughput: ${{env.throughput}}
           #disableLoadConfig: ${{env.disableLoadConfig}}
           #concurrencyControlEnabled: ${{env.concurrencyControlEnabled}}
           #iterationsEnabled: ${{env.iterationsEnabled}}
           #iterations: ${{env.iterations}}
-          locations: ${{env.locations}}
+          # locations: ${{env.locations}}
+          apiToken: ${{env.apiToken}}
+          triggerUrl: ${{env.triggerUrl}}
+          runExistingBucketLevelTest: ${{env.runExistingBucketLevelTest}}
