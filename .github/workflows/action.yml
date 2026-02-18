@@ -24,7 +24,7 @@ env:
   iterationsEnabled: "true"
   iterations: "1"
   locations: "harbor-661f7af50d8f6f8f0d014359"
-  runExistingBucketLevelTest: "true"
+  runExistingBucketLevelTest: "false"
   triggerUrl: "https://api.runscope.com/radar/bucket/caf5cb14-bab6-47e0-a0c8-5dc259143a94/trigger"
   apiToken: ${{secrets.BZM_APIM_TOKEN}}
   
