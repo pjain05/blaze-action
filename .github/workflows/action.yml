@@ -45,9 +45,9 @@ jobs:
       #   uses: dnyanesh-nagre-perforce/blaze-action@v4.0.1
         id: run-test
         with:
-          # apiKey: ${{env.apiKey}}
-          # apiSecret: ${{env.apiSecret}}
-          #testID: ${{env.testID}}
+          apiKey: ${{env.apiKey}}
+          apiSecret: ${{env.apiSecret}}
+          testID: ${{env.testID}}
           # continuePipeline: ${{env.continuePipeline}}
           # showTailLog: ${{env.showTailLog}}
           #uploadFileCheck: ${{env.uploadFileCheck}}
@@ -55,9 +55,9 @@ jobs:
           # envVariable: ${{env.envVariable}}
           # testRunByTestName: ${{env.testRunByTestName}}
           # testID: ${{env.testID}}
-          # testName: ${{env.testName}}
-          # projectID: ${{env.projectID}}
-          #createTest: ${{env.createTest}}
+          testName: ${{env.testName}}
+          projectID: ${{env.projectID}}
+          createTest: ${{env.createTest}}
           # totalUsers: ${{env.totalUsers}}
           # duration: ${{env.duration}}
           # rampUp: ${{env.rampUp}}
