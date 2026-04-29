@@ -11,9 +11,10 @@ env:
   #testRunByTestName: true
   # testName: "via GitHub Action-22"
   # testName: "Hello From Action"
-  testID: "13744261"
-  projectID: "1478138"
+  testID: "10503599"
+  projectID: "2559449"
   createTest: "false"
+  multiTests: "true"
   totalUsers: "38"
   duration: "4"
   rampUp: "2"
@@ -55,9 +56,10 @@ jobs:
           # envVariable: ${{env.envVariable}}
           # testRunByTestName: ${{env.testRunByTestName}}
           # testID: ${{env.testID}}
-          testName: ${{env.testName}}
+          #testName: ${{env.testName}}
           projectID: ${{env.projectID}}
           createTest: ${{env.createTest}}
+          multiTests: ${{env.multiTests}}
           # totalUsers: ${{env.totalUsers}}
           # duration: ${{env.duration}}
           # rampUp: ${{env.rampUp}}
@@ -68,6 +70,6 @@ jobs:
           #iterationsEnabled: ${{env.iterationsEnabled}}
           #iterations: ${{env.iterations}}
           # locations: ${{env.locations}}
-          apiToken: ${{env.apiToken}}
-          triggerUrl: ${{env.triggerUrl}}
-          runExistingBucketLevelTest: ${{env.runExistingBucketLevelTest}}
+          #apiToken: ${{env.apiToken}}
+          #triggerUrl: ${{env.triggerUrl}}
+          #runExistingBucketLevelTest: ${{env.runExistingBucketLevelTest}}
